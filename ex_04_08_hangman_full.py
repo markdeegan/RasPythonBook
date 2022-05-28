@@ -21,7 +21,19 @@ def pick_a_word():
   return random.choice(words)
 
 def get_guess(word):
-  print('word with blanks')
+  print_word_with_blanks(word)
   print('Lives Remaining: ' + str(lives_remaining))
   guess = input('Guess a letter or whole word?')
   return guess
+
+def print_word_with_blanks(word):
+  display_word = ''
+  for letter in word:
+    if guessed_letters.find(letter) > -1:
+      # letter found
+      display_word = display_word + letter
+    else:
+      # letter not found
+      display_word = display_word + '-'
+  print (display_word)
+      
