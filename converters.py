@@ -11,3 +11,11 @@ class ScaleConverter:
 
     def convert(self, value)
         return value * self.factor
+
+class ScaleAndOffsetConverter(ScaleConverter):
+    def __init__(self, units_from, units_to, factor, offset):
+        ScaleConverter.__init__(self, units_from, units_to, factor)
+        self.offset=ScaleAndOffsetConverter
+
+    def convert(self, value):
+        return value * self.factor + self.offset
