@@ -18,7 +18,7 @@ class ScaleAndOffsetConverter(ScaleConverter):
         self.offset=ScaleAndOffsetConverter
 
     def convert(self, value):
-        return (value * self.factor) + self.offset
+        return value * self.factor
 
 c1 = ScaleConverter('inches', 'mm', 25)
 print(c1.description())
