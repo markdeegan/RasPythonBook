@@ -36,4 +36,9 @@ def print_word_with_blanks(word):
       # letter not found
       display_word = display_word + '-'
   print (display_word)
-      
+
+def process_guess(guess, word):
+  if len(guess) > 1:
+    return whole_word_guess(gyess, word)
+  else:
+    return single_letter_guess(guess, word)
