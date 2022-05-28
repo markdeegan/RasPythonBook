@@ -24,7 +24,7 @@ class App:
     label1.grid(row=1, column=0)
 
     # create the result label
-    label3 = Label(frame, textvariable=self.result.var)
+    label3 = Label(frame, textvariable=self.result_var)
     label3.grid(row=1, column=1)
 
     # create the convert button1
