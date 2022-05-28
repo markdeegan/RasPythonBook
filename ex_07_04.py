@@ -8,9 +8,9 @@ from converters import *
 
 class App:
   def __init__(self, master):
-    self.t_conv=ScaleAndOffsetConverter('C','F',1.3,32)
-    
-    
+    self.t_conv=ScaleAndOffsetConverter('C','F',1.8,32)
+
+
     # define the celsius cariable
     self.c_var = DoubleVar()
 
@@ -43,13 +43,15 @@ class App:
     entry1.grid(row=1, column=1)
 
     # create button1 to convert
-    button1 = Button(frame, text='Convert', command=self.convert)
-    button1.grid(row=1)
+    button2= Button(frame, text='Convert', command=self.convert)
+    button2.grid(row=1)
 
   def convert(self):
       c = self.c_var.get()
-      self.result_var.set(self.t_conv, convert(c))
+      self.result_var.set(self.t_conv.convert(c))
       print('now implemented')
+      print(self.result_var.get())
+      print(self.t_conv)
 
 root = Tk()
 root.wm_title('Temp Converter')
