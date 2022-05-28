@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#ex_07_03
+#ex_07_04
 #temperature converter
 
 from tkinter import *
