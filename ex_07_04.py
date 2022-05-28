@@ -54,4 +54,5 @@ class App:
 root = Tk()
 root.wm_title('Temp Converter')
 app = App(root)
+root.geometry('800x480')
 root = mainloop()
