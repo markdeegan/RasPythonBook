@@ -39,7 +39,7 @@ def print_word_with_blanks(word):
 
 def process_guess(guess, word):
   if len(guess) > 1:
-    return whole_word_guess(gyess, word)
+    return whole_word_guess(guess, word)
   else:
     return single_letter_guess(guess, word)
 
@@ -52,7 +52,7 @@ def whole_word_guess(guess, word):
     return False
   
 def single_letter_guess(guess, word):
-  global guesses_letters
+  global guessed_letters
   global lives_remaining
   if word.find(guess) == -1:
     # letter guess was incorrect
