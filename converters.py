@@ -18,12 +18,12 @@ class ScaleAndOffsetConverter(ScaleConverter):
         self.offset=ScaleAndOffsetConverter
 
     def convert(self, value):
-        return value * self.factor + self.offset
+        return (value * self.factor) + self.offset
 
-# c1 = ScaleConverter('inches', 'mm', 25)
-# print(c1.description())
-# print('converting 2 inches')
-# print(str(c1.convert(2)) + c1.units_to)
+c1 = ScaleConverter('inches', 'mm', 25)
+print(c1.description())
+print('converting 2 inches')
+print(str(c1.convert(2)) + c1.units_to)
 
 c2 = ScaleAndOffsetConverter('Celsius', 'Fahrenheit', 1.8, 32)
 print(c2.description())
