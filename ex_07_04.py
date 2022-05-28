@@ -3,9 +3,14 @@
 #temperature converter
 
 from tkinter import *
+from converters import *
+
 
 class App:
   def __init__(self, master):
+    self.t_conv=ScaleAndOffsetConverter('C','F',1.3,32)
+    
+    
     # define the celsius cariable
     self.c_var = DoubleVar()
 
@@ -42,7 +47,9 @@ class App:
     button1.grid(row=1)
 
   def convert(self):
-      print('not yet implemented')
+      c = self.c_var.get()
+      self.result_var.set(self.t_conv, convert(c))
+      print('now implemented')
 
 root = Tk()
 root.wm_title('Temp Converter')
