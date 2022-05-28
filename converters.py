@@ -1,0 +1,5 @@
+# converters module
+
+class ScaleConverter:
+
+
