@@ -7,7 +7,7 @@ class ScaleConverter:
         self.factor     = factor
 
     def description(self):
-        return 'Convert ' + self_units_from + 'to ' + self_units_to
+        return 'Convert ' + self.units_from + 'to ' + self.units_to
 
     def convert(self, value):
         return value * self.factor
