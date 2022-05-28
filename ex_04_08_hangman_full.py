@@ -42,3 +42,12 @@ def process_guess(guess, word):
     return whole_word_guess(gyess, word)
   else:
     return single_letter_guess(guess, word)
+
+def whole_word_guess(guess, word):
+  global lives_remaining
+  if guess == word:
+    return true
+  else:
+    lives_remaining = lives_remaining -1
+    return false
+  
