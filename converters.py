@@ -9,7 +9,7 @@ class ScaleConverter:
     def description(self):
         return 'Convert ' + self_units_from + 'to ' + self_units_to
 
-    def convert(self, value)
+    def convert(self, value):
         return value * self.factor
 
 class ScaleAndOffsetConverter(ScaleConverter):
