@@ -46,8 +46,26 @@ def process_guess(guess, word):
 def whole_word_guess(guess, word):
   global lives_remaining
   if guess == word:
-    return true
+    return True
   else:
     lives_remaining = lives_remaining -1
-    return false
+    return False
   
+def single_letter_guess(guess, word):
+  global guesses_letters
+  global lives_remaining
+  if word.find(guess) == -1:
+    # letter guess was incorrect
+    lives_remaining = lives_remaining -1
+  guessed_letters = guessed_letters + guess
+  if all_letters_guessed(word):
+    return True
+  return False
+
+def all_letters_guessed(word):
+  for letter in word:
+    if guessed_letters.find(letter) == 1:
+      return False
+    return True
+  
+play()
